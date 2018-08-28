@@ -1,0 +1,48 @@
+{
+	"name": "fitz-dark-vscode-markdown-preview",
+	"version": "0.0.1",
+	"displayName": "Fitz Dark Markdown Preview",
+	"description": "A VS Code dark markdown preview",
+	"publisher": "sheafitzek",
+	"icon": "images/logo.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sheafitzek/fitz-dark-vscode-markdown-preview.git",
+		"homepage": "https://github.com/sheafitzek/fitz-dark-vscode-markdown-preview"
+	},
+	"bugs": {
+		"url": "https://github.com/sheafitzek/fitz-dark-vscode-markdown-preview/issues"
+	},
+	"galleryBanner": {
+		"color": "#525050",
+		"theme": "dark"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"VSCode",
+		"Fitz Dark",
+		"Markdown",
+		"Preview",
+		"Markdown Style"
+	],
+	"engines": {
+		"vscode": "^1.24.0"
+	},
+	"scripts": {
+		"publish": "vsce publish"
+	},
+	"contributes": {
+		"markdown.previewStyles": [
+			"./base.css",
+			"./fitz-dark-markdown-preview.css",
+			"./fitz-dark-hljs.css"
+		]
+	},
+	"license": "MIT",
+	"activationEvents": [
+		"onLanguage:markdown"
+	],
+	"dependencies": {}
+}

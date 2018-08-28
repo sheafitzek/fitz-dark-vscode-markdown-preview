@@ -1,0 +1,294 @@
+/*
+
+fitz-dark style (c) Shea Fitzek <sheafitzek.dev@gmail.com>
+
+*/
+
+:root {
+	--foreground: #e1e1e1;
+	--background: #1e1e1e;
+	--keyword: #23d6f1;
+	--built_in: #0080ff;
+	--type: #76ff76;
+	--literal: #ffb3ff;
+	--number: #e26a9b;
+	--regexp: #ff7fff;
+	--string: rgba(195, 195, 195, 0.8);
+	--subst: #00ffff;
+	--symbol: #22a7ff;
+	--class: #28a228;
+	--function: rgba(156, 255, 76, 0.8);
+	--title: #28a228;
+	--params: #804bff;
+	--comment: #777777;
+	--doctag: #777777;
+	--meta: #ff7fff;
+	--meta-keyword: #e13b74;
+	--meta-string: rgba(195, 195, 195, 0.8);
+	--section: #f0f040;
+	--tag: #0080ff;
+	--name: #0080ff;
+	--builtin-name: #f39c12;
+	--attr: #80beff;
+	--attribute: #f9690e;
+	--variable: #00ffff;
+	--bullet: #20df20;
+	--code: #22a7ff;
+	--emphasis: ;
+	--strong: ;
+	--formula: #22a7ff;
+	--link: #23d6f1;
+	--quote: rgba(195, 195, 195, 0.8);
+	--selector-tag: #0080ff;
+	--selector-id: #f0f040;
+	--selector-class: #76ff76;
+	--selector-attr: #fcf270;
+	--selector-pseudo: #fcf270;
+	--template-tag: #0080ff;
+	--template-variable: #e13b74;
+	--addition: #00ff00;
+	--addition-background: rgba(0, 255, 0, 0.2);
+	--deletion: #ff0000;
+	--deletion-background: rgba(255, 0, 0, 0.2);
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	padding: 0.5em;
+
+	color: var(--foreground);
+	background-color: var(--background);
+}
+
+/* GENERAL PURPOSE */
+
+/* keyword in a regular Algol-style language */
+.hljs-keyword {
+	color: var(--keyword);
+}
+
+/* built-in or library object (constant, class, function) */
+.hljs-built_in {
+	color: var(--built_in);
+}
+
+/* user-defined type in a language with first-class syntactically significant types, like Haskell */
+.hljs-type {
+	color: var(--type);
+}
+
+/* special identifier for a built-in value (“true”, “false”, “null”) */
+.hljs-literal {
+	color: var(--literal);
+}
+
+/* number, including units and modifiers, if any */
+.hljs-number {
+	color: var(--number);
+}
+
+/* literal regular expression */
+.hljs-regexp {
+	color: var(--regexp);
+}
+
+/* literal string, character */
+.hljs-string {
+	color: var(--string);
+}
+
+/* parsed section inside a literal string */
+.hljs-subst {
+	color: var(--subst);
+}
+
+/* symbolic constant, interned string, goto label */
+.hljs-symbol {
+	color: var(--symbol);
+}
+
+/* class or class-level declaration (interfaces, traits, modules, etc) */
+.hljs-class {
+	color: var(--class);
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* function or method declaration */
+.hljs-function {
+	color: var(--function);
+}
+
+/* name of a class or a function at the place of declaration */
+.hljs-title {
+	color: var(--title);
+	font-style: bold;
+}
+
+/* block of function arguments (parameters) at the place of declaration */
+.hljs-params {
+	color: var(--params);
+	font-weight: bold;
+}
+
+/* META */
+
+/* comment */
+.hljs-comment {
+	color: var(--comment);
+	font-style: italic;
+}
+
+/* documentation markup within comments */
+.hljs-doctag {
+	color: var(--doctag);
+	font-style: italic;
+}
+
+/* flags, modifiers, annotations, processing instructions, preprocessor directive, etc */
+.hljs-meta {
+	color: var(--meta);
+}
+
+/* keyword or built-in within meta construct */
+.hljs-meta-keyword {
+	color: var(--meta-keyword);
+}
+
+/* string within meta construct */
+.hljs-meta-string {
+	color: var(--meta-string);
+}
+
+/* TAGS, ATTRIBUTES, CONFIGS */
+
+/* heading of a section in a config file, heading in text markup */
+.hljs-section {
+	color: var(--section);
+}
+
+/* XML/HTML tag */
+.hljs-tag {
+	color: var(--tag);
+}
+
+/* name of an XML tag, the first word in an s-expression */
+.hljs-name {
+	color: var(--name);
+}
+
+/* s-expression name from the language standard library */
+.hljs-builtin-name {
+	color: var(--builtin-name);
+}
+
+/* name of an attribute with no language defined semantics (keys in JSON, setting names in .ini), also sub-attribute within another highlighted object, like XML tag */
+.hljs-attr {
+	color: var(--attr);
+	font-style: bold;
+}
+
+/* name of an attribute followed by a structured value part, like CSS properties */
+.hljs-attribute {
+	color: var(--attribute);
+	font-style: bold;
+}
+
+/* variable in a config or a template file, environment var expansion in a script */
+.hljs-variable {
+	color: var(--variable);
+}
+
+/* MARKUP */
+
+/* list item bullet in text markup */
+.hljs-bullet {
+	color: var(--bullet);
+}
+
+/* code block in text markup */
+.hljs-code {
+	color: var(--code);
+}
+
+/* emphasis in text markup */
+.hljs-emphasis {
+	font-style: italic;
+}
+
+/* strong emphasis in text markup */
+.hljs-strong {
+	font-style: bold;
+}
+
+/* mathematical formula in text markup */
+.hljs-formula {
+	color: var(--formula);
+}
+
+/* hyperlink in text markup */
+.hljs-link {
+	color: var(--link);
+	text-decoration: underline;
+}
+
+/* quotation in text markup */
+.hljs-quote {
+	color: var(--quote);
+}
+
+/* CSS */
+
+/* tag selector in CSS */
+.hljs-selector-tag {
+	color: var(--selector-tag);
+}
+
+/* selector in CSS */
+.hljs-selector-id #id {
+	color: var(--selector-id);
+	font-style: italic;
+}
+
+/* .class selector in CSS */
+.hljs-selector-class {
+	color: var(--selector-class);
+	font-style: italic;
+}
+
+/* [attr] selector in CSS */
+.hljs-selector-attr {
+	color: var(--selector-attr);
+}
+
+/* :pseudo selector in CSS */
+.hljs-selector-pseudo {
+	color: var(--selector-pseudo);
+}
+
+/* TEMPLATES */
+
+/* tag of a template language */
+.hljs-template-tag {
+	color: var(--template-tag);
+}
+
+/* variable in a template language */
+.hljs-template-variable {
+	color: var(--template-variable);
+}
+
+/* DIFF */
+
+/* added or changed line in a diff */
+.hljs-addition {
+	color: var(--addition);
+	background-color: var(--addition-background);
+}
+
+/* deleted line in a diff */
+.hljs-deletion {
+	color: var(--deletion);
+	background-color: var(--deletion-background);
+}
